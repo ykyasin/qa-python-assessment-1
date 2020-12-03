@@ -1,1 +1,1 @@
-# This is my attempt at the QA Python assessment. All my answers will be found here. 
+## Completed assessment with 100% pass rate on pytest
