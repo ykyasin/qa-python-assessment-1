@@ -272,7 +272,11 @@ def eight(input):
 	# Take a look at the documentation for Strings, List and range.
 
 def nine(inputString, char):
-	return -1
+	inputString = inputString.replace(" ", "")
+	if inputString.find(char) >= 0:
+		return inputString.find(char) + 1
+	else:
+		return -1
 
 	# <QUESTION 10>
 
@@ -292,4 +296,11 @@ def nine(inputString, char):
 	# How do we find the length of a container, take a look at help(len), you will also need to look at help(str) for String manipulation.
  
 def ten(string, int, char):
-	return False
+	string = string.lower()
+	string = string.replace(" ", "")
+	if int - 1 > len(string):
+		return False
+	elif string[int - 1] == char:
+		return True
+	else: 
+		return False
