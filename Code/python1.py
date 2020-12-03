@@ -101,7 +101,14 @@ def two(input):
 	# No Hints for this question
 
 def three(arg1):
-	return "null"
+	if arg1 % 3 == 0 and arg1 % 5 == 0:
+		return "fizzbuzz"
+	elif arg1 % 3 == 0:
+		return "fizz"
+	elif arg1 % 5 == 0:
+		return "buzz"
+	else:
+		return "null"
 
 
 	# <QUESTION 4>
@@ -127,8 +134,18 @@ def three(arg1):
 	# help(int) for working with numbers and help(str) for working with Strings.
 
 def four(arg1):
-	return 0
+	totals = []
+	arg1 = arg1.split()
 
+	for element in arg1:
+		x = list(element)
+		total = 0
+		for element in x: 
+			element = int(element)
+			total += element
+		totals.append(total)
+	
+	return max(totals)
 	# <QUESTION 5>
 
     # Given a large string that represents a csv, the structure of each record will be as follows:
