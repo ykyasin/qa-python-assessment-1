@@ -227,7 +227,9 @@ def six(input):
 	# How do we ignore case in a String? help(str) may offer some insight.
 
 def seven(input):
-    return 0
+	i = input.lower()
+	counter = i.count('a') + i.count('e') + i.count('i') + i.count('o') + i.count('u')
+	return counter
 
 	# <QUESTION 8>
 
@@ -245,7 +247,11 @@ def seven(input):
 	# You may need to create a list of numbers from 0 to i, take a look at help(range).
 
 def eight(input):
-	return 1
+	total = 1
+	for i in range(input,0,-1):
+		total *= i
+
+	return total
 
 	# <QUESTION 9>
 
