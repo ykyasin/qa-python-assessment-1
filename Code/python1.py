@@ -172,7 +172,16 @@ def four(arg1):
 	# help(str) and help(list), you might also need to use a function that can create a list of numbers for you, try help(range).
 
 def five(input):
-	return []
+	input = input.split(',')
+	print(input)
+	names = []
+	for i in range(int(len(input) / 4)):
+		print(i)
+		if input[(i*4)+2] == 'False':
+			names.append(input[i*4])
+
+	names = list(dict.fromkeys(names))
+	return names
 
 	# <QUESTION 6>
 
@@ -193,7 +202,15 @@ def five(input):
 
 
 def six(input):
-    return False
+	check1 = input.find('ei')
+	check2 = input.find('ie')
+	print(check1, check2)
+	if check1 != -1 and input[check1 - 1] == 'c':
+		return True
+	elif check2 != -1 and input[check2 - 1] != 'c':
+		return True
+	else:
+		return False
 
 	# <QUESTION 7>
 
